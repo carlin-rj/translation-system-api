@@ -43,7 +43,8 @@
         "spatie/laravel-ignition": "^2.4",
         "phpstan/phpstan": "^1.10",
         "nunomaduro/larastan": "^2.9",
-        "ekino/phpstan-banned-code": "^1.0"
+        "ekino/phpstan-banned-code": "^1.0",
+        "kitloong/laravel-migrations-generator": "^7.0"
     },
     "autoload": {
         "psr-4": {

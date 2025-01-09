@@ -47,9 +47,9 @@ class AppServiceProvider extends ServiceProvider
 
                 // 替换 SQL 中的 ? 占位符为绑定参数的值
                 $pdo = $event->connection->getPdo();
-                $sql = vsprintf(str_replace('?', '%s', $sql), array_map([$pdo, 'quote'], $bindings));
+                //$sql = vsprintf(str_replace('?', '%s', $sql), array_map([$pdo, 'quote'], $bindings));
                 //@phpstan-ignore-next-line
-                dump("SQL: {$sql}");
+                //dump("SQL: {$sql}");
 
             });
         }

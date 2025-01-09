@@ -66,6 +66,13 @@
       0 => 'Kalnoy\\Nestedset\\NestedSetServiceProvider',
     ),
   ),
+  'kitloong/laravel-migrations-generator' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'KitLoong\\MigrationsGenerator\\MigrationsGeneratorServiceProvider',
+    ),
+  ),
   'laravel/horizon' => 
   array (
     'providers' => 
