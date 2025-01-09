@@ -20,7 +20,7 @@
 
 1. 克隆项目
 ```bash
-git clone https://github.com/carlin-rj/translation-system-web.git
+git clone https://github.com/carlin-rj/translation-system-api.git
 cd translation-system-api
 ```
 
