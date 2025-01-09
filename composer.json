@@ -1,0 +1,99 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The skeleton application for the Laravel framework.",
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "dcat/laravel-wherehasin": "^0.8.0",
+        "intervention/image": "^3.6",
+        "james-heinrich/getid3": "^1.9",
+        "kalnoy/nestedset": "^6.0",
+        "laravel/framework": "^11.0",
+        "laravel/horizon": "^5.24",
+        "laravel/octane": "^2.3",
+        "laravel/sanctum": "^4.0",
+        "laravel/telescope": "^5.0",
+        "laravel/tinker": "^2.9",
+        "maatwebsite/excel": "^3.1",
+        "nwidart/laravel-modules": "^11.0",
+        "overtrue/easy-sms": "^3.0",
+        "spatie/laravel-data": "^4.5",
+        "tucker-eric/eloquentfilter": "^3.3",
+        "wikimedia/composer-merge-plugin": "^2.1",
+        "carlin/laravel-filesystem-oss": "^1.0",
+        "carlin/laravel-translate-drives": "^1.0",
+        "ext-zip": "*",
+        "symfony/var-exporter": "^7.1",
+        "carlin/laravel-dict": "*",
+        "carlin/laravel-data-swagger": "^1.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^3.0",
+        "fakerphp/faker": "^1.23",
+        "laravel/pint": "^1.13",
+        "laravel/sail": "^1.26",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.0",
+        "phpunit/phpunit": "^11.0.1",
+        "spatie/laravel-ignition": "^2.4",
+        "phpstan/phpstan": "^1.10",
+        "nunomaduro/larastan": "^2.9",
+        "ekino/phpstan-banned-code": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "files": [
+            "app/Helpers/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
+            "@php artisan ide-helper:models -M"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi",
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan migrate --graceful --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        },
+        "merge-plugin": {
+            "include": [
+                "Modules/*/composer.json"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "wikimedia/composer-merge-plugin": true
+        }
+    }
+}

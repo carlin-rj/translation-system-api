@@ -1,0 +1,2795 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "翻译管理系统",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "https://dev.test.com",
+            "description": "开发环境"
+        },
+        {
+            "url": "https://test.test.com",
+            "description": "测试环境"
+        },
+        {
+            "url": "https://api.test.com",
+            "description": "生产环境"
+        }
+    ],
+    "paths": {
+        "api/common/dict/all": {
+            "post": {
+                "tags": [
+                    "公共/字典"
+                ],
+                "summary": "获取字典数据",
+                "description": "获取字典数据",
+                "operationId": "41bad78ba28254dc85d57dbe53c27b78",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesCommonHttpResourcesDictResource"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/common/dict/openApi": {
+            "post": {
+                "tags": [
+                    "公共/字典"
+                ],
+                "summary": "获取openapi字典数据",
+                "description": "获取openapi字典数据",
+                "operationId": "6feebb47e6784cfc1d2b3bc09254b338",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesCommonHttpResourcesDictResource"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/v1/translation/collect": {
+            "post": {
+                "tags": [
+                    "公共接口/翻译收集"
+                ],
+                "summary": "收集翻译",
+                "operationId": "a40112e5a1ebde148d031efc09bc7ce3",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "data"
+                                ],
+                                "properties": {
+                                    "data": {
+                                        "title": "数据",
+                                        "required": [],
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/ModulesOpenApiHttpRequestsCollectDataItems"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "required": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/v1/translation/get": {
+            "post": {
+                "tags": [
+                    "公共接口/翻译收集"
+                ],
+                "summary": "获取已翻译的数据",
+                "operationId": "2fefeb2b40bcc2216e80a2065c681ee8",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesOpenApiHttpResourcesTranslationResource"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/language/list": {
+            "post": {
+                "tags": [
+                    "语言管理"
+                ],
+                "summary": "获取语言列表",
+                "operationId": "e459fc76a0ed4748bd26184f45e2668b",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [],
+                                "properties": {
+                                    "keyword": {
+                                        "title": "搜索关键词",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "en"
+                                    },
+                                    "page": {
+                                        "title": "页码",
+                                        "required": [],
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "per_page": {
+                                        "title": "每页数量",
+                                        "required": [],
+                                        "type": "integer",
+                                        "example": 20
+                                    },
+                                    "match_type": {
+                                        "title": "搜索类型",
+                                        "description": "MatchTypeEnum(exact:精确匹配;fuzzy:模糊匹配)。",
+                                        "required": [],
+                                        "type": "string",
+                                        "enum": [
+                                            "exact",
+                                            "fuzzy"
+                                        ]
+                                    },
+                                    "search_type": {
+                                        "title": "搜索字段",
+                                        "required": [],
+                                        "type": "string"
+                                    },
+                                    "search_content_arr": {
+                                        "title": "搜索内容",
+                                        "required": [],
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "sort_key": {
+                                        "title": "排序字段",
+                                        "required": [],
+                                        "type": "string"
+                                    },
+                                    "sort_value": {
+                                        "title": "排序值",
+                                        "required": [],
+                                        "type": "string",
+                                        "enum": [
+                                            "asc",
+                                            "desc"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "required": [],
+                                            "properties": {
+                                                "list": {
+                                                    "title": "列表",
+                                                    "required": [],
+                                                    "type": "array",
+                                                    "items": {
+                                                        "$ref": "#/components/schemas/ModulesTranslationHttpResourcesLanguageResource"
+                                                    }
+                                                },
+                                                "total": {
+                                                    "description": "总数量",
+                                                    "required": [],
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/language/create": {
+            "post": {
+                "tags": [
+                    "语言管理"
+                ],
+                "summary": "创建语言",
+                "operationId": "c898f2d2fb4da1b39ff79e63200a7a87",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "code",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "code": {
+                                        "title": "语言代码",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "en"
+                                    },
+                                    "name": {
+                                        "title": "语言名称",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "英语"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesTranslationHttpResourcesLanguageResource",
+                                            "description": "数据"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/language/update": {
+            "post": {
+                "tags": [
+                    "语言管理"
+                ],
+                "summary": "更新语言",
+                "operationId": "609919c8fd0d1a73c764f9a3caf25d98",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "code",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "code": {
+                                        "title": "语言代码",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "en"
+                                    },
+                                    "name": {
+                                        "title": "语言名称",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "英语"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesTranslationHttpResourcesLanguageResource",
+                                            "description": "数据"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/language/destroy": {
+            "post": {
+                "tags": [
+                    "语言管理"
+                ],
+                "summary": "删除语言",
+                "operationId": "b5ff81b0f0c8cd58622f150f09518718",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "code"
+                                ],
+                                "properties": {
+                                    "code": {
+                                        "title": "语言代码",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "en"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "required": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/language/all": {
+            "post": {
+                "tags": [
+                    "语言管理"
+                ],
+                "summary": "获取所有语言",
+                "operationId": "49a22c7b093e4338965233d121bf8f30",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesTranslationHttpResourcesLanguageResource"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/project/all": {
+            "post": {
+                "tags": [
+                    "项目管理"
+                ],
+                "summary": "获取项目列表",
+                "operationId": "273e765fd07bf421d87506c320db43e8",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesTranslationHttpResourcesProjectResource"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/project/create": {
+            "post": {
+                "tags": [
+                    "项目管理"
+                ],
+                "summary": "创建项目",
+                "operationId": "eb3ef0b1d55f605977fa8951ebb0aa6d",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "key",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "key": {
+                                        "title": "项目标识",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "wms"
+                                    },
+                                    "name": {
+                                        "title": "项目名称",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "仓储管理系统"
+                                    },
+                                    "description": {
+                                        "title": "项目描述",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "用于管理仓库库存"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesTranslationHttpResourcesProjectResource",
+                                            "description": "数据"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/project/update": {
+            "post": {
+                "tags": [
+                    "项目管理"
+                ],
+                "summary": "更新项目",
+                "operationId": "315fbd1a7f20da26254b1bd5935d7c2d",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "id"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "title": "项目名称",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "仓储管理系统"
+                                    },
+                                    "description": {
+                                        "title": "项目描述",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "用于管理仓库库存"
+                                    },
+                                    "id": {
+                                        "title": "数据id",
+                                        "required": [],
+                                        "type": "integer",
+                                        "example": 1
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "required": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/project/destroy": {
+            "post": {
+                "tags": [
+                    "项目管理"
+                ],
+                "summary": "删除项目",
+                "operationId": "8a25d19985b34a065a9be1219e545e47",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "id"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "title": "数据id",
+                                        "required": [],
+                                        "type": "integer",
+                                        "example": 1
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "required": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/list": {
+            "post": {
+                "tags": [
+                    "翻译管理"
+                ],
+                "summary": "获取翻译列表",
+                "operationId": "1b589bffaf3ae4f0285a235632f415df",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [],
+                                "properties": {
+                                    "project_key": {
+                                        "title": "项目标识",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "wms"
+                                    },
+                                    "language": {
+                                        "title": "目标语言",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "en"
+                                    },
+                                    "status": {
+                                        "title": "翻译状态",
+                                        "description": "TranslationStatusEnum(-1:全部;1:待翻译;2:已翻译)。",
+                                        "required": [],
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "enum": [
+                                            -1,
+                                            1,
+                                            2
+                                        ],
+                                        "example": -1
+                                    },
+                                    "keyword": {
+                                        "title": "搜索关键词",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "submit"
+                                    },
+                                    "page": {
+                                        "title": "页码",
+                                        "required": [],
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "per_page": {
+                                        "title": "每页数量",
+                                        "required": [],
+                                        "type": "integer",
+                                        "example": 20
+                                    },
+                                    "match_type": {
+                                        "title": "搜索类型",
+                                        "description": "MatchTypeEnum(exact:精确匹配;fuzzy:模糊匹配)。",
+                                        "required": [],
+                                        "type": "string",
+                                        "enum": [
+                                            "exact",
+                                            "fuzzy"
+                                        ]
+                                    },
+                                    "search_type": {
+                                        "title": "搜索字段",
+                                        "required": [],
+                                        "type": "string"
+                                    },
+                                    "search_content_arr": {
+                                        "title": "搜索内容",
+                                        "required": [],
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "sort_key": {
+                                        "title": "排序字段",
+                                        "required": [],
+                                        "type": "string"
+                                    },
+                                    "sort_value": {
+                                        "title": "排序值",
+                                        "required": [],
+                                        "type": "string",
+                                        "enum": [
+                                            "asc",
+                                            "desc"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "required": [],
+                                            "properties": {
+                                                "list": {
+                                                    "title": "列表",
+                                                    "required": [],
+                                                    "type": "array",
+                                                    "items": {
+                                                        "$ref": "#/components/schemas/ModulesTranslationHttpResourcesTranslationResource"
+                                                    }
+                                                },
+                                                "total": {
+                                                    "description": "总数量",
+                                                    "required": [],
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/create": {
+            "post": {
+                "tags": [
+                    "翻译管理"
+                ],
+                "summary": "创建翻译",
+                "operationId": "0fd9d2b846e1a5fdea92390d3731eea1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "project_key",
+                                    "key",
+                                    "source_text",
+                                    "language"
+                                ],
+                                "properties": {
+                                    "project_key": {
+                                        "title": "项目标识",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "wms"
+                                    },
+                                    "key": {
+                                        "title": "翻译键名",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "common.submit"
+                                    },
+                                    "source_text": {
+                                        "title": "源文本",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "提交"
+                                    },
+                                    "language": {
+                                        "title": "目标语言",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "en"
+                                    },
+                                    "target_text": {
+                                        "title": "译文",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "Submit"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesTranslationHttpResourcesTranslationResource",
+                                            "description": "数据"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/update": {
+            "post": {
+                "tags": [
+                    "翻译管理"
+                ],
+                "summary": "更新翻译",
+                "operationId": "a943197fa2177e51ce38e4da9644f136",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "id",
+                                    "target_text"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "title": "ID",
+                                        "required": [],
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "target_text": {
+                                        "title": "译文",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "Submit"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "required": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/destroy": {
+            "post": {
+                "tags": [
+                    "翻译管理"
+                ],
+                "summary": "删除翻译",
+                "operationId": "96229597e0989a83abe6812a24be0201",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "id"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "title": "数据id",
+                                        "required": [],
+                                        "type": "integer",
+                                        "example": 1
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "description": "数据",
+                                            "required": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/executeTranslation": {
+            "post": {
+                "tags": [
+                    "翻译管理"
+                ],
+                "summary": "执行翻译",
+                "operationId": "b636915caa4e65459d5117376f0bd461",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "drive",
+                                    "query",
+                                    "to"
+                                ],
+                                "properties": {
+                                    "drive": {
+                                        "title": "翻译驱动",
+                                        "description": "TranslationProviderEnum(google:谷歌翻译;alibabaCloud:阿里云翻译;baidu:百度翻译)。翻译服务提供商",
+                                        "required": [],
+                                        "type": "string",
+                                        "enum": [
+                                            "google",
+                                            "alibabaCloud",
+                                            "baidu"
+                                        ],
+                                        "example": "baidu"
+                                    },
+                                    "query": {
+                                        "title": "待翻译文本",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "你好世界"
+                                    },
+                                    "to": {
+                                        "title": "目标语言",
+                                        "description": "目标语言代码",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "en"
+                                    },
+                                    "from": {
+                                        "title": "源语言",
+                                        "description": "默认auto自动检测",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "auto"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesTranslationHttpResourcesExecuteTranslationResource",
+                                            "description": "数据"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/statusCounts": {
+            "post": {
+                "tags": [
+                    "翻译管理"
+                ],
+                "summary": "获取翻译状态统计",
+                "operationId": "2b1a16bed241a1a4216951668cd0c334",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [],
+                                "properties": {
+                                    "project_key": {
+                                        "title": "项目标识",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "wms"
+                                    },
+                                    "language": {
+                                        "title": "目标语言",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "en"
+                                    },
+                                    "status": {
+                                        "title": "翻译状态",
+                                        "description": "TranslationStatusEnum(-1:全部;1:待翻译;2:已翻译)。",
+                                        "required": [],
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "enum": [
+                                            -1,
+                                            1,
+                                            2
+                                        ],
+                                        "example": -1
+                                    },
+                                    "keyword": {
+                                        "title": "搜索关键词",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "submit"
+                                    },
+                                    "page": {
+                                        "title": "页码",
+                                        "required": [],
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "per_page": {
+                                        "title": "每页数量",
+                                        "required": [],
+                                        "type": "integer",
+                                        "example": 20
+                                    },
+                                    "match_type": {
+                                        "title": "搜索类型",
+                                        "description": "MatchTypeEnum(exact:精确匹配;fuzzy:模糊匹配)。",
+                                        "required": [],
+                                        "type": "string",
+                                        "enum": [
+                                            "exact",
+                                            "fuzzy"
+                                        ]
+                                    },
+                                    "search_type": {
+                                        "title": "搜索字段",
+                                        "required": [],
+                                        "type": "string"
+                                    },
+                                    "search_content_arr": {
+                                        "title": "搜索内容",
+                                        "required": [],
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "sort_key": {
+                                        "title": "排序字段",
+                                        "required": [],
+                                        "type": "string"
+                                    },
+                                    "sort_value": {
+                                        "title": "排序值",
+                                        "required": [],
+                                        "type": "string",
+                                        "enum": [
+                                            "asc",
+                                            "desc"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesTranslationHttpResourcesStatusCountResource"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/nextPendingTranslation": {
+            "post": {
+                "tags": [
+                    "翻译管理"
+                ],
+                "summary": "获取下一条待翻译内容",
+                "operationId": "67666a0bc366200a44ea768163153b59",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [],
+                                "properties": {
+                                    "project_key": {
+                                        "title": "项目标识",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "wms"
+                                    },
+                                    "language": {
+                                        "title": "语言",
+                                        "required": [],
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "example": "en"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "state": {
+                                            "description": "response code",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "000001"
+                                        },
+                                        "msg": {
+                                            "description": "response message",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "debug": {
+                                            "description": "debug info",
+                                            "required": [],
+                                            "type": "mixed",
+                                            "example": null
+                                        },
+                                        "request_id": {
+                                            "description": "request id",
+                                            "required": [],
+                                            "type": "string",
+                                            "example": "xxx-xxx-xxx"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/ModulesTranslationHttpResourcesTranslationResource",
+                                            "description": "数据"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "api/translation/export": {
+            "post": {
+                "tags": [
+                    "翻译管理"
+                ],
+                "summary": "导出翻译",
+                "operationId": "90833efe43e81f072d53cbaf62a1f640",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "project_key",
+                                    "type"
+                                ],
+                                "properties": {
+                                    "project_key": {
+                                        "title": "项目key",
+                                        "required": [],
+                                        "type": "string",
+                                        "example": "web_admin"
+                                    },
+                                    "type": {
+                                        "title": "导出类型",
+                                        "description": "ExportTypeEnum(laravel:Laravel;vue-i18n:Vue-i18n;android:Android;ios:IOS)。",
+                                        "required": [],
+                                        "type": "string",
+                                        "enum": [
+                                            "laravel",
+                                            "vue-i18n",
+                                            "android",
+                                            "ios"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/zip": []
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ModulesCommonHttpResourcesDictItems": {
+                "title": "字典值",
+                "description": "",
+                "required": [
+                    "description",
+                    "value"
+                ],
+                "properties": {
+                    "description": {
+                        "title": "字典项名",
+                        "required": [],
+                        "type": "string"
+                    },
+                    "value": {
+                        "title": "字典项值",
+                        "required": [],
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "integer"
+                            }
+                        ]
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesCommonHttpResourcesDictResource": {
+                "title": "字典",
+                "description": "",
+                "required": [
+                    "name",
+                    "description",
+                    "data"
+                ],
+                "properties": {
+                    "name": {
+                        "title": "字典名",
+                        "required": [],
+                        "type": "string"
+                    },
+                    "description": {
+                        "title": "描述",
+                        "required": [],
+                        "type": "string"
+                    },
+                    "data": {
+                        "title": "字典项",
+                        "required": [],
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ModulesCommonHttpResourcesDictItems"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesOpenApiHttpRequestsCollectDataItems": {
+                "title": "收集详情数据",
+                "description": "",
+                "required": [
+                    "key",
+                    "source_text",
+                    "language"
+                ],
+                "properties": {
+                    "key": {
+                        "title": "翻译键名",
+                        "required": [],
+                        "type": "string",
+                        "example": "common.submit"
+                    },
+                    "source_text": {
+                        "title": "源文本",
+                        "required": [],
+                        "type": "string",
+                        "example": "提交"
+                    },
+                    "language": {
+                        "title": "目标语言",
+                        "required": [],
+                        "type": "string",
+                        "example": "en"
+                    },
+                    "target_text": {
+                        "title": "译文",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "Submit"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesOpenApiHttpRequestsTranslationCollectRequest": {
+                "title": "翻译数据",
+                "description": "",
+                "required": [
+                    "data"
+                ],
+                "properties": {
+                    "data": {
+                        "title": "数据",
+                        "required": [],
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ModulesOpenApiHttpRequestsCollectDataItems"
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesOpenApiHttpResourcesTranslationResource": {
+                "title": "翻译数据",
+                "description": "",
+                "required": [
+                    "key",
+                    "source_text",
+                    "language"
+                ],
+                "properties": {
+                    "key": {
+                        "title": "翻译键名",
+                        "required": [],
+                        "type": "string",
+                        "example": "common.submit"
+                    },
+                    "source_text": {
+                        "title": "源文本",
+                        "required": [],
+                        "type": "string",
+                        "example": "提交"
+                    },
+                    "target_text": {
+                        "title": "译文",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "Submit"
+                    },
+                    "language": {
+                        "title": "目标语言",
+                        "required": [],
+                        "type": "string",
+                        "example": "en"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpRequestsExecuteTranslationRequest": {
+                "title": "翻译文本",
+                "description": "",
+                "required": [
+                    "drive",
+                    "query",
+                    "to"
+                ],
+                "properties": {
+                    "drive": {
+                        "title": "翻译驱动",
+                        "description": "TranslationProviderEnum(google:谷歌翻译;alibabaCloud:阿里云翻译;baidu:百度翻译)。翻译服务提供商",
+                        "required": [],
+                        "type": "string",
+                        "enum": [
+                            "google",
+                            "alibabaCloud",
+                            "baidu"
+                        ],
+                        "example": "baidu"
+                    },
+                    "query": {
+                        "title": "待翻译文本",
+                        "required": [],
+                        "type": "string",
+                        "example": "你好世界"
+                    },
+                    "to": {
+                        "title": "目标语言",
+                        "description": "目标语言代码",
+                        "required": [],
+                        "type": "string",
+                        "example": "en"
+                    },
+                    "from": {
+                        "title": "源语言",
+                        "description": "默认auto自动检测",
+                        "required": [],
+                        "type": "string",
+                        "example": "auto"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpRequestsExportTranslationRequest": {
+                "title": "导出翻译",
+                "description": "",
+                "required": [
+                    "project_key",
+                    "type"
+                ],
+                "properties": {
+                    "project_key": {
+                        "title": "项目key",
+                        "required": [],
+                        "type": "string",
+                        "example": "web_admin"
+                    },
+                    "type": {
+                        "title": "导出类型",
+                        "description": "ExportTypeEnum(laravel:Laravel;vue-i18n:Vue-i18n;android:Android;ios:IOS)。",
+                        "required": [],
+                        "type": "string",
+                        "enum": [
+                            "laravel",
+                            "vue-i18n",
+                            "android",
+                            "ios"
+                        ]
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpRequestsLanguageCreateRequest": {
+                "title": "创建语种",
+                "description": "",
+                "required": [
+                    "code",
+                    "name"
+                ],
+                "properties": {
+                    "code": {
+                        "title": "语言代码",
+                        "required": [],
+                        "type": "string",
+                        "example": "en"
+                    },
+                    "name": {
+                        "title": "语言名称",
+                        "required": [],
+                        "type": "string",
+                        "example": "英语"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpRequestsLanguageDestroyRequest": {
+                "title": "语种删除",
+                "description": "",
+                "required": [
+                    "code"
+                ],
+                "properties": {
+                    "code": {
+                        "title": "语言代码",
+                        "required": [],
+                        "type": "string",
+                        "example": "en"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpRequestsLanguageListRequest": {
+                "title": "语种搜索",
+                "description": "",
+                "required": [],
+                "properties": {
+                    "page": {
+                        "title": "页码",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "per_page": {
+                        "title": "每页数量",
+                        "required": [],
+                        "type": "integer",
+                        "example": 20
+                    },
+                    "match_type": {
+                        "title": "搜索类型",
+                        "description": "MatchTypeEnum(exact:精确匹配;fuzzy:模糊匹配)。",
+                        "required": [],
+                        "type": "string",
+                        "enum": [
+                            "exact",
+                            "fuzzy"
+                        ]
+                    },
+                    "search_type": {
+                        "title": "搜索字段",
+                        "required": [],
+                        "type": "string"
+                    },
+                    "search_content_arr": {
+                        "title": "搜索内容",
+                        "required": [],
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "sort_key": {
+                        "title": "排序字段",
+                        "required": [],
+                        "type": "string"
+                    },
+                    "sort_value": {
+                        "title": "排序值",
+                        "required": [],
+                        "type": "string",
+                        "enum": [
+                            "asc",
+                            "desc"
+                        ]
+                    },
+                    "keyword": {
+                        "title": "搜索关键词",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "en"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpRequestsLanguageUpdateRequest": {
+                "title": "语种更新",
+                "description": "",
+                "required": [
+                    "code",
+                    "name"
+                ],
+                "properties": {
+                    "code": {
+                        "title": "语言代码",
+                        "required": [],
+                        "type": "string",
+                        "example": "en"
+                    },
+                    "name": {
+                        "title": "语言名称",
+                        "required": [],
+                        "type": "string",
+                        "example": "英语"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpRequestsNextPendingTranslationRequest": {
+                "title": "下一个翻译",
+                "description": "",
+                "required": [],
+                "properties": {
+                    "project_key": {
+                        "title": "项目标识",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "wms"
+                    },
+                    "language": {
+                        "title": "语言",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "en"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpRequestsProjectCreateRequest": {
+                "title": "创建项目",
+                "description": "",
+                "required": [
+                    "key",
+                    "name"
+                ],
+                "properties": {
+                    "key": {
+                        "title": "项目标识",
+                        "required": [],
+                        "type": "string",
+                        "example": "wms"
+                    },
+                    "name": {
+                        "title": "项目名称",
+                        "required": [],
+                        "type": "string",
+                        "example": "仓储管理系统"
+                    },
+                    "description": {
+                        "title": "项目描述",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "用于管理仓库库存"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpRequestsProjectUpdateRequest": {
+                "title": "更新项目请求",
+                "description": "",
+                "required": [
+                    "name",
+                    "id"
+                ],
+                "type": "object",
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/AppHttpRequestsIdRequest"
+                    },
+                    {
+                        "properties": {
+                            "name": {
+                                "title": "项目名称",
+                                "required": [],
+                                "type": "string",
+                                "example": "仓储管理系统"
+                            },
+                            "description": {
+                                "title": "项目描述",
+                                "required": [],
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "example": "用于管理仓库库存"
+                            }
+                        },
+                        "type": "object"
+                    }
+                ]
+            },
+            "ModulesTranslationHttpRequestsTranslationCreateRequest": {
+                "title": "创建翻译",
+                "description": "",
+                "required": [
+                    "project_key",
+                    "key",
+                    "source_text",
+                    "language"
+                ],
+                "properties": {
+                    "project_key": {
+                        "title": "项目标识",
+                        "required": [],
+                        "type": "string",
+                        "example": "wms"
+                    },
+                    "key": {
+                        "title": "翻译键名",
+                        "required": [],
+                        "type": "string",
+                        "example": "common.submit"
+                    },
+                    "source_text": {
+                        "title": "源文本",
+                        "required": [],
+                        "type": "string",
+                        "example": "提交"
+                    },
+                    "language": {
+                        "title": "目标语言",
+                        "required": [],
+                        "type": "string",
+                        "example": "en"
+                    },
+                    "target_text": {
+                        "title": "译文",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "Submit"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpRequestsTranslationListRequest": {
+                "title": "查询翻译列表",
+                "description": "",
+                "required": [],
+                "properties": {
+                    "page": {
+                        "title": "页码",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "per_page": {
+                        "title": "每页数量",
+                        "required": [],
+                        "type": "integer",
+                        "example": 20
+                    },
+                    "match_type": {
+                        "title": "搜索类型",
+                        "description": "MatchTypeEnum(exact:精确匹配;fuzzy:模糊匹配)。",
+                        "required": [],
+                        "type": "string",
+                        "enum": [
+                            "exact",
+                            "fuzzy"
+                        ]
+                    },
+                    "search_type": {
+                        "title": "搜索字段",
+                        "required": [],
+                        "type": "string"
+                    },
+                    "search_content_arr": {
+                        "title": "搜索内容",
+                        "required": [],
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "sort_key": {
+                        "title": "排序字段",
+                        "required": [],
+                        "type": "string"
+                    },
+                    "sort_value": {
+                        "title": "排序值",
+                        "required": [],
+                        "type": "string",
+                        "enum": [
+                            "asc",
+                            "desc"
+                        ]
+                    },
+                    "project_key": {
+                        "title": "项目标识",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "wms"
+                    },
+                    "language": {
+                        "title": "目标语言",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "en"
+                    },
+                    "status": {
+                        "title": "翻译状态",
+                        "description": "TranslationStatusEnum(-1:全部;1:待翻译;2:已翻译)。",
+                        "required": [],
+                        "type": [
+                            "integer",
+                            "null"
+                        ],
+                        "enum": [
+                            -1,
+                            1,
+                            2
+                        ],
+                        "example": -1
+                    },
+                    "keyword": {
+                        "title": "搜索关键词",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "submit"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpRequestsTranslationUpdateRequest": {
+                "title": "更新翻译",
+                "description": "",
+                "required": [
+                    "id",
+                    "target_text"
+                ],
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "target_text": {
+                        "title": "译文",
+                        "required": [],
+                        "type": "string",
+                        "example": "Submit"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpResourcesExecuteTranslationResource": {
+                "title": "翻译响应",
+                "description": "",
+                "required": [],
+                "properties": {
+                    "success": {
+                        "title": "是否成功",
+                        "required": [],
+                        "type": "boolean",
+                        "example": false
+                    },
+                    "text": {
+                        "title": "翻译字符",
+                        "required": [],
+                        "type": "string",
+                        "example": ""
+                    },
+                    "error": {
+                        "title": "错误提示",
+                        "required": [],
+                        "type": "string",
+                        "example": ""
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpResourcesLanguageResource": {
+                "title": "语言信息",
+                "description": "",
+                "required": [
+                    "code",
+                    "name",
+                    "created_at",
+                    "updated_at"
+                ],
+                "properties": {
+                    "code": {
+                        "title": "语言代码",
+                        "required": [],
+                        "type": "string",
+                        "example": "en"
+                    },
+                    "name": {
+                        "title": "语言名称",
+                        "required": [],
+                        "type": "string",
+                        "example": "英语"
+                    },
+                    "created_at": {
+                        "title": "创建时间",
+                        "required": [],
+                        "type": "string",
+                        "example": "2024-01-01 00:00:00"
+                    },
+                    "updated_at": {
+                        "title": "更新时间",
+                        "required": [],
+                        "type": "string",
+                        "example": "2024-01-01 00:00:00"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpResourcesLanguagesResource": {
+                "title": "翻译记录",
+                "description": "",
+                "required": [
+                    "name",
+                    "code"
+                ],
+                "properties": {
+                    "name": {
+                        "title": "语言名称",
+                        "required": [],
+                        "type": "string",
+                        "example": "英语"
+                    },
+                    "code": {
+                        "title": "语言code",
+                        "required": [],
+                        "type": "string",
+                        "example": "en"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpResourcesProjectResource": {
+                "title": "项目信息",
+                "description": "",
+                "required": [
+                    "id",
+                    "key",
+                    "name",
+                    "status",
+                    "created_at",
+                    "updated_at"
+                ],
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "key": {
+                        "title": "项目标识",
+                        "required": [],
+                        "type": "string",
+                        "example": "wms"
+                    },
+                    "name": {
+                        "title": "项目名称",
+                        "required": [],
+                        "type": "string",
+                        "example": "仓储管理系统"
+                    },
+                    "description": {
+                        "title": "项目描述",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "用于管理仓库库存"
+                    },
+                    "api_token": {
+                        "title": "api_token",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "app_token_987654321"
+                    },
+                    "translations_count": {
+                        "title": "待翻译数量",
+                        "required": [],
+                        "type": [
+                            "integer",
+                            "null"
+                        ],
+                        "example": 0
+                    },
+                    "translated_translations_count": {
+                        "title": "已翻译数量",
+                        "required": [],
+                        "type": [
+                            "integer",
+                            "null"
+                        ],
+                        "example": 0
+                    },
+                    "status": {
+                        "title": "状态",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "created_at": {
+                        "title": "创建时间",
+                        "required": [],
+                        "type": "string",
+                        "example": "2024-03-20 10:00:00"
+                    },
+                    "updated_at": {
+                        "title": "更新时间",
+                        "required": [],
+                        "type": "string",
+                        "example": "2024-03-20 10:00:00"
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpResourcesStatusCountResource": {
+                "title": "翻译状态统计",
+                "description": "",
+                "required": [
+                    "code",
+                    "name",
+                    "count"
+                ],
+                "properties": {
+                    "code": {
+                        "title": "状态编码",
+                        "description": "TranslationStatusEnum(-1:全部;1:待翻译;2:已翻译)。",
+                        "required": [],
+                        "type": "integer",
+                        "enum": [
+                            -1,
+                            1,
+                            2
+                        ],
+                        "example": 0
+                    },
+                    "name": {
+                        "title": "状态名称",
+                        "required": [],
+                        "type": "string",
+                        "example": "待翻译"
+                    },
+                    "count": {
+                        "title": "数量",
+                        "required": [],
+                        "type": "integer",
+                        "example": 10
+                    }
+                },
+                "type": "object"
+            },
+            "ModulesTranslationHttpResourcesTranslationResource": {
+                "title": "翻译记录",
+                "description": "",
+                "required": [
+                    "id",
+                    "project_key",
+                    "project_name",
+                    "key",
+                    "source_text",
+                    "language",
+                    "language_name",
+                    "status",
+                    "status_text",
+                    "created_at",
+                    "updated_at"
+                ],
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "project_key": {
+                        "title": "项目标识",
+                        "required": [],
+                        "type": "string",
+                        "example": "wms"
+                    },
+                    "project_name": {
+                        "title": "项目名称",
+                        "required": [],
+                        "type": "string",
+                        "example": "仓储系统"
+                    },
+                    "key": {
+                        "title": "翻译键名",
+                        "required": [],
+                        "type": "string",
+                        "example": "common.submit"
+                    },
+                    "source_text": {
+                        "title": "源文本",
+                        "required": [],
+                        "type": "string",
+                        "example": "提交"
+                    },
+                    "target_text": {
+                        "title": "译文",
+                        "required": [],
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "example": "Submit"
+                    },
+                    "language": {
+                        "title": "目标语言",
+                        "required": [],
+                        "type": "string",
+                        "example": "en"
+                    },
+                    "language_name": {
+                        "title": "语言名称",
+                        "required": [],
+                        "type": "string",
+                        "example": "英语"
+                    },
+                    "status": {
+                        "title": "翻译状态",
+                        "description": "0待翻译，1已翻译",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "status_text": {
+                        "title": "翻译状态",
+                        "description": "待翻译，已翻译",
+                        "required": [],
+                        "type": "string",
+                        "example": "待翻译"
+                    },
+                    "created_at": {
+                        "title": "创建时间",
+                        "required": [],
+                        "type": "string",
+                        "example": "2024-03-20 10:00:00"
+                    },
+                    "updated_at": {
+                        "title": "更新时间",
+                        "required": [],
+                        "type": "string",
+                        "example": "2024-03-20 10:00:00"
+                    }
+                },
+                "type": "object"
+            },
+            "AppHttpRequestsIdRequest": {
+                "title": "id参数",
+                "description": "id参数",
+                "required": [
+                    "id"
+                ],
+                "properties": {
+                    "id": {
+                        "title": "数据id",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    }
+                },
+                "type": "object"
+            },
+            "AppHttpResourcesTestItems": {
+                "title": "响应结果2",
+                "description": "",
+                "required": [
+                    "doc_system_uuid",
+                    "type",
+                    "type_text"
+                ],
+                "properties": {
+                    "doc_system_uuid": {
+                        "title": "doc_system_uuid",
+                        "required": [],
+                        "type": "string",
+                        "example": 1
+                    },
+                    "menu_id": {
+                        "title": "menu_id",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "type": {
+                        "title": "type",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "type_text": {
+                        "title": "type_text",
+                        "required": [],
+                        "type": "string",
+                        "example": 1
+                    }
+                },
+                "type": "object"
+            },
+            "AppHttpResourcesTestResource": {
+                "title": "响应结果2",
+                "description": "",
+                "required": [
+                    "doc_system_uuid",
+                    "type"
+                ],
+                "properties": {
+                    "doc_system_uuid": {
+                        "title": "doc_system_uuid",
+                        "description": "testes",
+                        "required": [],
+                        "type": "string",
+                        "example": 1
+                    },
+                    "menu_id": {
+                        "title": "menu_id",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "type": {
+                        "title": "type",
+                        "required": [],
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "items": {
+                        "title": "items",
+                        "required": [],
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AppHttpResourcesTestItems"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "公共/字典",
+            "description": "字典"
+        },
+        {
+            "name": "公共接口/翻译收集",
+            "description": "开放接口"
+        },
+        {
+            "name": "语言管理",
+            "description": "语言管理"
+        },
+        {
+            "name": "项目管理",
+            "description": "项目管理"
+        },
+        {
+            "name": "翻译管理",
+            "description": "翻译管理"
+        }
+    ]
+}

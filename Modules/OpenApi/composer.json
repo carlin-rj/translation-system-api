@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/openapi",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\OpenApi\\": "app/",
+            "Modules\\OpenApi\\Database\\Factories\\": "database/factories/",
+            "Modules\\OpenApi\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\OpenApi\\Tests\\": "tests/"
+        }
+    }
+}
